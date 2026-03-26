@@ -307,6 +307,155 @@
   color: #6B6B6B;
 }
 
+/* ===== HIVER THEME — Light, warm white with orange accent ===== */
+.agent-theme-hiver {
+  background: #fffaf7;
+}
+
+.agent-theme-hiver .agent-page-bg .orb-main,
+.agent-theme-hiver .agent-page-bg .orb-secondary {
+  display: none;
+}
+
+.agent-theme-hiver .agent-page-hero-text h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+}
+
+.agent-theme-hiver .agent-page-subtitle {
+  color: #6b6b6b;
+}
+
+.agent-theme-hiver .section-header h2 {
+  color: #1a1a1a;
+}
+
+.agent-theme-hiver .section-header p {
+  color: #6b6b6b;
+}
+
+.agent-theme-hiver .agent-page-badge {
+  background: rgba(255, 107, 43, 0.06);
+  border-color: rgba(255, 107, 43, 0.15);
+  color: #e85a1e;
+}
+
+.agent-theme-hiver .agent-feature-pill {
+  background: #f5f0ec;
+  border-color: #e8e0da;
+  color: #1a1a1a;
+}
+
+.agent-theme-hiver .feature-check {
+  color: #ff6b2b;
+}
+
+.agent-theme-hiver .capability-card {
+  background: #fff;
+  border-color: #e8e0da;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.agent-theme-hiver .capability-card:hover {
+  background: #fff;
+  border-color: #d2cac4;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.agent-theme-hiver .capability-icon {
+  color: #ff6b2b;
+}
+
+.agent-theme-hiver .capability-card h3 {
+  color: #1a1a1a;
+}
+
+.agent-theme-hiver .capability-card p {
+  color: #6b6b6b;
+}
+
+.agent-theme-hiver .demo-chat {
+  background: #fff;
+  border-color: #e8e0da;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.agent-theme-hiver .demo-chat-header {
+  background: #f5f0ec;
+  border-color: #e8e0da;
+  color: #1a1a1a;
+}
+
+.agent-theme-hiver .demo-chat-status {
+  color: #34C759;
+}
+
+.agent-theme-hiver .demo-msg.agent .demo-msg-bubble {
+  background: #f5f0ec;
+  color: #1a1a1a;
+}
+
+.agent-theme-hiver .demo-msg.user .demo-msg-bubble {
+  background: #ff6b2b;
+  color: #fff;
+}
+
+.agent-theme-hiver .demo-chat-input {
+  border-color: #e8e0da;
+}
+
+.agent-theme-hiver .demo-chat-input input {
+  background: #f5f0ec;
+  border-color: #e8e0da;
+  color: #1a1a1a;
+}
+
+.agent-theme-hiver .demo-chat-input input::placeholder {
+  color: #a8a8a8;
+}
+
+.agent-theme-hiver .demo-chat-send {
+  background: #ff6b2b;
+}
+
+.agent-theme-hiver .bubble-cta {
+  background: #f5f0ec;
+  border-color: #e8e0da;
+}
+
+.agent-theme-hiver .bubble-cta-glow {
+  display: none;
+}
+
+.agent-theme-hiver .bubble-cta h2 {
+  color: #1a1a1a;
+}
+
+.agent-theme-hiver .bubble-cta p {
+  color: #6b6b6b;
+}
+
+.agent-theme-hiver .bubble-cta-icon {
+  color: #ff6b2b;
+}
+
+.agent-theme-hiver .bubble-pointer-dot {
+  background: #ff6b2b;
+  box-shadow: 0 0 30px rgba(255, 107, 43, 0.3);
+}
+
+.agent-theme-hiver .bubble-pointer-line {
+  background: linear-gradient(to bottom, #ff6b2b, transparent);
+}
+
+.agent-theme-hiver .character-status {
+  background: #fff;
+  border-color: #e8e0da;
+  color: #6b6b6b;
+}
+
 /* ===== ZENDESK THEME — Dark teal/green, warm feel ===== */
 .agent-theme-zendesk {
   background: #03363D;
