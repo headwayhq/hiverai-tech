@@ -1,0 +1,242 @@
+/* ===== INTEGRATIONS PAGE — Identity: Green/emerald tones, dot pattern, connected feel ===== */
+
+.integ-page {
+  background: #070a0f;
+}
+
+/* Dot pattern */
+.integ-dots-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Hero */
+.integ-hero {
+  position: relative;
+  z-index: 1;
+  padding: 160px 0 80px;
+  text-align: center;
+}
+
+.integ-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.integ-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-xl);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: var(--accent-green);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.integ-hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.integ-gradient-text {
+  background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-cyan) 50%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.integ-hero-sub {
+  font-size: 17px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* How it works */
+.integ-how {
+  position: relative;
+  z-index: 1;
+  padding: 60px 0;
+}
+
+.integ-how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.integ-how-card {
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.integ-how-card:hover {
+  border-color: rgba(16, 185, 129, 0.2);
+  background: rgba(16, 185, 129, 0.03);
+  transform: translateY(-4px);
+}
+
+.integ-how-icon {
+  margin-bottom: 20px;
+}
+
+.integ-how-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.integ-how-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Integration grid */
+.integ-grid-section {
+  position: relative;
+  z-index: 1;
+  padding: 60px 0;
+}
+
+.integ-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.integ-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s;
+}
+
+.integ-card:hover {
+  border-color: var(--border-hover);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.integ-card-icon {
+  color: var(--accent-green);
+  flex-shrink: 0;
+}
+
+.integ-card-info {
+  flex: 1;
+}
+
+.integ-card-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.integ-card-category {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.integ-card-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--radius-xl);
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--accent-green);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* CTA */
+.integ-cta {
+  position: relative;
+  z-index: 1;
+  padding: 60px 0 100px;
+}
+
+.integ-cta-card {
+  position: relative;
+  text-align: center;
+  padding: 64px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.06), rgba(6, 182, 212, 0.06));
+  border: 1px solid rgba(16, 185, 129, 0.12);
+  overflow: hidden;
+}
+
+.integ-cta-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  opacity: 0.05;
+  filter: blur(100px);
+  top: -100px;
+  right: -50px;
+  pointer-events: none;
+}
+
+.integ-cta-card h2 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.integ-cta-card p {
+  font-size: 17px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .integ-hero h1 {
+    font-size: 36px;
+  }
+
+  .integ-how-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .integ-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .integ-cta-card {
+    padding: 40px 24px;
+  }
+
+  .integ-cta-card h2 {
+    font-size: 28px;
+  }
+}
