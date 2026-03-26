@@ -42,11 +42,11 @@ function Home() {
             </motion.p>
 
             <motion.div className="hero-actions" variants={fadeUp} custom={3}>
-              <Link to="/technology" className="btn-primary">
-                See How It Works <ArrowRight size={16} />
+              <Link to="/agents" className="btn-primary">
+                Explore Agents <ArrowRight size={16} />
               </Link>
-              <Link to="/agents" className="btn-secondary">
-                Explore Agents
+              <Link to="/technology" className="btn-secondary">
+                See How It Works
               </Link>
             </motion.div>
 
