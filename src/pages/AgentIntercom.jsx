@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
 import { MessageSquare, Zap, ArrowRightLeft, BarChart3, Clock, Layers } from 'lucide-react'
 import AgentPage from './AgentPage'
+import useChatWidget from '../hooks/useChatWidget'
 
 const agent = {
   id: 'intercom',
@@ -59,31 +59,7 @@ const agent = {
 }
 
 function AgentIntercom() {
-  useEffect(() => {
-    const CDN_URL = 'https://chat-widget.hiverhq.com/chat-widget'
-    const script = document.createElement('script')
-    script.src = CDN_URL + '/js/sdk.js'
-    script.defer = true
-    script.async = true
-    script.onload = () => {
-      window.hiverChatWidgetSettings = window.hiverChatWidgetSettings || {}
-      window.hiverChatWidgetSettings.position = 'right'
-      window.chatwootSDK.run({
-        websiteToken: 'Lu5pBTYLvn94VEr3tvCa9Us7',
-        baseUrl: '',
-      })
-    }
-    document.body.appendChild(script)
-
-    return () => {
-      script.remove()
-      const widget = document.querySelector('.woot-widget-holder')
-      if (widget) widget.remove()
-      const bubble = document.querySelector('.woot--bubble-holder')
-      if (bubble) bubble.remove()
-    }
-  }, [])
-
+  useChatWidget('Lu5pBTYLvn94VEr3tvCa9Us7')
   return <AgentPage agent={agent} />
 }
 
