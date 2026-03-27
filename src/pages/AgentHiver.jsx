@@ -6,6 +6,7 @@ const agent = {
   id: 'hiver',
   name: 'Hiver Support',
   color: '#ff6b2b',
+  logo: '/logos/Hiver.jpeg',
   badge: 'Primary Agent',
   headline: <>Meet Your Smartest<br />Support Agent</>,
   description: 'The flagship HiverAI agent — trained on your entire knowledge base, past tickets, and product documentation. It thinks through problems, asks clarifying questions, and resolves issues autonomously.',

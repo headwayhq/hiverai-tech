@@ -120,6 +120,13 @@
   justify-content: center;
 }
 
+.agent-card-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
 .agent-card-primary {
   display: flex;
   align-items: center;
@@ -248,6 +255,19 @@
 
 .competitor-card-left {
   flex: 1;
+}
+
+.competitor-card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.competitor-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 .competitor-card-left h3 {

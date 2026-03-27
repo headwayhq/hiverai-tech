@@ -6,6 +6,7 @@ const agent = {
   id: 'tesla',
   name: 'Tesla Agent',
   color: '#e82127',
+  logo: '/logos/tesla.jpg',
   badge: 'Tesla Support',
   headline: <>Intelligent Support<br />for Every Drive</>,
   description: 'AI-powered support for Tesla owners — handles vehicle troubleshooting, charging queries, service scheduling, and account management with instant, accurate answers.',

@@ -27,7 +27,11 @@ function AgentPage({ agent }) {
           <div className="agent-page-hero-grid">
             <motion.div className="agent-page-hero-text" initial="hidden" animate="visible">
               <motion.div className="agent-page-badge" variants={fadeUp} custom={0}>
-                <MessageSquare size={14} />
+                {agent.logo ? (
+                  <img src={agent.logo} alt={agent.name} className="agent-badge-logo" />
+                ) : (
+                  <MessageSquare size={14} />
+                )}
                 <span>{agent.badge}</span>
               </motion.div>
 

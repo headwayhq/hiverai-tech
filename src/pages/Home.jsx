@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Brain, Zap, MessageSquare, Shield } from 'lucide-react'
+import { ArrowRight, Brain, Zap, MessageSquare, Shield, Target, Swords } from 'lucide-react'
 import './Home.css'
 
 const fadeUp = {
@@ -79,20 +79,24 @@ function Home() {
               <div className="brain-ring ring-3" />
 
               <div className="connection-node node-1">
-                <MessageSquare size={16} />
+                <img src="/logos/Hiver.jpeg" alt="Hiver" className="node-logo" />
                 <span>Hiver</span>
               </div>
               <div className="connection-node node-2">
-                <MessageSquare size={16} />
+                <img src="/logos/apple_white.jpg" alt="Apple" className="node-logo" />
                 <span>Apple</span>
               </div>
               <div className="connection-node node-3">
-                <MessageSquare size={16} />
+                <img src="/logos/Stripe.png" alt="Stripe" className="node-logo" />
                 <span>Stripe</span>
               </div>
               <div className="connection-node node-4">
-                <MessageSquare size={16} />
+                <img src="/logos/tesla.jpg" alt="Tesla" className="node-logo" />
                 <span>Tesla</span>
+              </div>
+              <div className="connection-node node-competitor">
+                <img src="/logos/intercom.jpeg" alt="Intercom" className="node-logo" />
+                <span>vs Intercom</span>
               </div>
             </div>
           </motion.div>

@@ -6,6 +6,7 @@ const agent = {
   id: 'stripe',
   name: 'Stripy',
   color: '#635BFF',
+  logo: '/logos/Stripe.png',
   badge: 'Stripe Integration',
   headline: <>Smarter Payments,<br />Happier Customers</>,
   description: 'Integrates directly with Stripe — understands billing history, subscription status, and payment issues to resolve customer queries automatically.',

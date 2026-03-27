@@ -6,6 +6,7 @@ const agent = {
   id: 'intercom',
   name: 'HiverAI vs Fin',
   color: '#6834F0',
+  logo: '/logos/intercom.jpeg',
   bg: '#FAF9F6',
   badge: 'HiverAI Wins',
   headline: <>Why HiverAI Beats<br />Intercom Fin</>,

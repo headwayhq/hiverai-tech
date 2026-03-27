@@ -6,6 +6,7 @@ const agent = {
   id: 'apple',
   name: 'Apple Agent',
   color: '#0071E3',
+  logo: '/logos/apple.png',
   bg: '#fbfbfd',
   badge: 'Apple Ecosystem',
   headline: <>Your Apple<br />Support Genius</>,

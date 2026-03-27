@@ -10,6 +10,7 @@ const agents = [
     tagline: 'Primary support agent for Hiver',
     description: 'The flagship HiverAI agent — handles L1/L2 queries autonomously with human-like conversation.',
     color: '#ff6b2b',
+    logo: '/logos/Hiver.jpeg',
     primary: true,
     path: '/agents/hiver',
   },
@@ -19,6 +20,7 @@ const agents = [
     tagline: 'Support agent for Apple ecosystem',
     description: 'Specialized for Apple product support — device troubleshooting, warranty queries, and product guidance.',
     color: '#0071E3',
+    logo: '/logos/apple_white.jpg',
     primary: false,
     path: '/agents/apple',
   },
@@ -28,6 +30,7 @@ const agents = [
     tagline: 'Handles Stripe billing & payments',
     description: 'Integrates with Stripe — resolves billing queries, manages subscriptions, and handles refunds automatically.',
     color: '#635BFF',
+    logo: '/logos/Stripe.png',
     primary: false,
     path: '/agents/stripe',
   },
@@ -37,6 +40,7 @@ const agents = [
     tagline: 'Support for Tesla owners',
     description: 'AI-powered support for Tesla vehicles — troubleshooting, charging, service scheduling, and software updates.',
     color: '#e82127',
+    logo: '/logos/tesla.jpg',
     primary: false,
     path: '/agents/tesla',
   },
@@ -97,7 +101,7 @@ function Agents() {
                 <Link to={agent.path} className="agent-directory-card" style={{ '--card-color': agent.color }}>
                   <div className="agent-card-header">
                     <div className="agent-card-icon">
-                      <MessageSquare size={22} />
+                      <img src={agent.logo} alt={agent.name} className="agent-card-logo" />
                     </div>
                     {agent.primary && (
                       <div className="agent-card-primary">
@@ -140,7 +144,10 @@ function Agents() {
             </div>
             <Link to={competitor.path} className="competitor-card" style={{ '--card-color': competitor.color }}>
               <div className="competitor-card-left">
-                <h3>{competitor.name}</h3>
+                <div className="competitor-card-title">
+                  <img src="/logos/intercom.jpeg" alt="Intercom" className="competitor-logo" />
+                  <h3>{competitor.name}</h3>
+                </div>
                 <span className="agent-card-tagline">{competitor.tagline}</span>
                 <p>{competitor.description}</p>
               </div>
