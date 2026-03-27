@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Brain, Zap, MessageSquare, Shield, Target, Swords } from 'lucide-react'
+import { ArrowRight, Zap, Swords } from 'lucide-react'
 import './Home.css'
 
 const fadeUp = {
@@ -72,7 +72,31 @@ function Home() {
           >
             <div className="agent-brain">
               <div className="brain-core">
-                <Brain size={32} />
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
+                  {/* Head */}
+                  <circle cx="40" cy="28" r="16" fill="#fff" opacity="0.9" />
+                  {/* Hair */}
+                  <path d="M24 26 Q24 12 40 12 Q56 12 56 26 Q54 18 48 14 Q44 12 40 12 Q36 12 32 14 Q26 18 24 26 Z" fill="#2D2D3D" />
+                  {/* Eyes */}
+                  <circle cx="34" cy="28" r="2.5" fill="#1a1a2e" />
+                  <circle cx="46" cy="28" r="2.5" fill="#1a1a2e" />
+                  <circle cx="35" cy="27" r="1" fill="#fff" />
+                  <circle cx="47" cy="27" r="1" fill="#fff" />
+                  {/* Smile */}
+                  <path d="M35 34 Q40 38 45 34" stroke="#C4887A" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+                  {/* Body */}
+                  <path d="M28 44 Q28 40 32 38 L40 36 L48 38 Q52 40 52 44 L52 58 Q52 60 50 60 L30 60 Q28 60 28 58 Z" fill="#ff6b2b" />
+                  {/* Headset */}
+                  <path d="M23 26 Q23 16 40 16 Q57 16 57 26" stroke="#8b5cf6" strokeWidth="2.5" fill="none" />
+                  <rect x="20" y="24" width="5" height="8" rx="2.5" fill="#8b5cf6" />
+                  <rect x="55" y="24" width="5" height="8" rx="2.5" fill="#8b5cf6" />
+                  {/* Mic */}
+                  <path d="M20 30 Q16 32 17 36" stroke="#8b5cf6" strokeWidth="2" strokeLinecap="round" fill="none" />
+                  <circle cx="17" cy="37" r="2" fill="#8b5cf6" />
+                  {/* AI sparkle on shoulder */}
+                  <path d="M52 42 L54 40 L56 42 L54 44 Z" fill="#fff" opacity="0.8" />
+                  <path d="M26 42 L28 40 L30 42 L28 44 Z" fill="#fff" opacity="0.6" />
+                </svg>
               </div>
               <div className="brain-ring ring-1" />
               <div className="brain-ring ring-2" />
@@ -100,67 +124,6 @@ function Home() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* What makes HiverAI different */}
-      <section className="features-section">
-        <div className="container">
-          <motion.div
-            className="section-header"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-100px' }}
-            variants={fadeUp}
-          >
-            <h2>Why HiverAI?</h2>
-            <p>Not just another chatbot. An agent that understands, reasons, and acts.</p>
-          </motion.div>
-
-          <div className="features-grid">
-            {[
-              {
-                icon: <Brain size={24} />,
-                title: 'Thinks Autonomously',
-                desc: 'Our agent doesn\'t just pattern-match. It reasons through customer issues using intelligent knowledge retrieval and multi-step decision making.',
-                color: 'var(--accent-purple)',
-              },
-              {
-                icon: <Zap size={24} />,
-                title: 'Deep Context',
-                desc: 'Connects to your knowledge base, past tickets, and documentation to deliver accurate, relevant answers.',
-                color: 'var(--accent-orange)',
-              },
-              {
-                icon: <MessageSquare size={24} />,
-                title: 'Natural Conversations',
-                desc: 'Engages customers in human-like dialogue, asking clarifying questions and providing precise, contextual answers.',
-                color: 'var(--accent-blue)',
-              },
-              {
-                icon: <Shield size={24} />,
-                title: 'Enterprise Ready',
-                desc: 'Deploy as a simple chat widget. Embed with a single HTML snippet. Works with your existing support stack.',
-                color: 'var(--accent-green)',
-              },
-            ].map((feature, i) => (
-              <motion.div
-                key={feature.title}
-                className="feature-card"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: '-50px' }}
-                variants={fadeUp}
-                custom={i}
-              >
-                <div className="feature-icon" style={{ color: feature.color, background: `${feature.color}15` }}>
-                  {feature.icon}
-                </div>
-                <h3>{feature.title}</h3>
-                <p>{feature.desc}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

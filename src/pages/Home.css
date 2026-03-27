@@ -170,16 +170,16 @@
 
 .agent-brain {
   position: relative;
-  width: 360px;
-  height: 360px;
+  width: 480px;
+  height: 480px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .brain-core {
-  width: 72px;
-  height: 72px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent-orange), var(--accent-purple));
   display: flex;
@@ -198,20 +198,20 @@
 }
 
 .ring-1 {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   animation-delay: 0s;
 }
 
 .ring-2 {
-  width: 220px;
-  height: 220px;
+  width: 310px;
+  height: 310px;
   animation-delay: 0.5s;
 }
 
 .ring-3 {
-  width: 300px;
-  height: 300px;
+  width: 420px;
+  height: 420px;
   animation-delay: 1s;
 }
 
