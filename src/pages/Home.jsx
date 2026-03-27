@@ -102,26 +102,26 @@ function Home() {
               <div className="brain-ring ring-2" />
               <div className="brain-ring ring-3" />
 
-              <div className="connection-node node-1">
+              <Link to="/agents/hiver" className="connection-node node-1">
                 <img src="/logos/Hiver.jpeg" alt="Hiver" className="node-logo" />
                 <span>Hiver</span>
-              </div>
-              <div className="connection-node node-2">
+              </Link>
+              <Link to="/agents/apple" className="connection-node node-2">
                 <img src="/logos/apple_white.jpg" alt="Apple" className="node-logo" />
                 <span>Apple</span>
-              </div>
-              <div className="connection-node node-3">
+              </Link>
+              <Link to="/agents/stripe" className="connection-node node-3">
                 <img src="/logos/Stripe.png" alt="Stripe" className="node-logo" />
                 <span>Stripe</span>
-              </div>
-              <div className="connection-node node-4">
+              </Link>
+              <Link to="/agents/tesla" className="connection-node node-4">
                 <img src="/logos/tesla.jpg" alt="Tesla" className="node-logo" />
                 <span>Tesla</span>
-              </div>
-              <div className="connection-node node-competitor">
+              </Link>
+              <Link to="/agents/intercom" className="connection-node node-competitor">
                 <img src="/logos/intercom.jpeg" alt="Intercom" className="node-logo" />
                 <span>vs Intercom</span>
-              </div>
+              </Link>
             </div>
           </motion.div>
         </div>

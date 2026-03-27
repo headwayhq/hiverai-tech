@@ -234,6 +234,15 @@
   color: var(--text-primary);
   z-index: 3;
   animation: float-node 4s ease-in-out infinite;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.connection-node:hover {
+  transform: scale(1.1);
+  border-color: currentColor;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation-play-state: paused;
 }
 
 .node-logo {
