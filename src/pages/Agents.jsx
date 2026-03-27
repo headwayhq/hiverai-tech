@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { MessageSquare, Bot, Star, ArrowRight } from 'lucide-react'
+import { MessageSquare, Bot, Star, ArrowRight, Target } from 'lucide-react'
 import './Agents.css'
 
 const agents = [
@@ -23,24 +23,33 @@ const agents = [
     path: '/agents/apple',
   },
   {
-    id: 'intercom',
-    name: 'Intercom Agent',
-    tagline: 'AI-first responder for Intercom',
-    description: 'Drops into your Intercom widget — resolves common queries instantly, hands off complex cases with context.',
-    color: '#6834F0',
+    id: 'stripe',
+    name: 'Stripy',
+    tagline: 'Handles Stripe billing & payments',
+    description: 'Integrates with Stripe — resolves billing queries, manages subscriptions, and handles refunds automatically.',
+    color: '#635BFF',
     primary: false,
-    path: '/agents/intercom',
+    path: '/agents/stripe',
   },
   {
-    id: 'zendesk',
-    name: 'Zendesk Agent',
-    tagline: 'Works within Zendesk tickets',
-    description: 'Integrates with Zendesk — reads ticket history, suggests resolutions, auto-responds to common patterns.',
-    color: '#17494D',
+    id: 'tesla',
+    name: 'Tesla Agent',
+    tagline: 'Support for Tesla owners',
+    description: 'AI-powered support for Tesla vehicles — troubleshooting, charging, service scheduling, and software updates.',
+    color: '#e82127',
     primary: false,
-    path: '/agents/zendesk',
+    path: '/agents/tesla',
   },
 ]
+
+const competitor = {
+  id: 'intercom',
+  name: 'HiverAI vs Intercom Fin',
+  tagline: 'See how we stack up against the industry leader',
+  description: 'Intercom Fin is considered the best AI support agent in the market. We built HiverAI to beat it — higher resolution rates, deeper reasoning, and transparent pricing. See the comparison.',
+  color: '#6834F0',
+  path: '/agents/intercom',
+}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -108,6 +117,39 @@ function Agents() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Competitor comparison */}
+      <section className="agents-competitor">
+        <div className="container">
+          <motion.div
+            className="competitor-section"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+          >
+            <div className="competitor-header">
+              <div className="competitor-badge">
+                <Target size={14} />
+                <span>Competitor Comparison</span>
+              </div>
+              <h2>Built to Beat the Best</h2>
+              <p>We don't shy away from comparison. See how HiverAI stacks up against the industry's top AI agent.</p>
+            </div>
+            <Link to={competitor.path} className="competitor-card" style={{ '--card-color': competitor.color }}>
+              <div className="competitor-card-left">
+                <h3>{competitor.name}</h3>
+                <span className="agent-card-tagline">{competitor.tagline}</span>
+                <p>{competitor.description}</p>
+              </div>
+              <div className="competitor-card-right">
+                <span>See Comparison</span>
+                <ArrowRight size={18} />
+              </div>
+            </Link>
+          </motion.div>
         </div>
       </section>
     </div>

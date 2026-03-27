@@ -234,7 +234,7 @@ const characters = {
     </svg>
   ),
 
-  zendesk: ({ color }) => (
+  stripe: ({ color }) => (
     <svg viewBox="0 0 320 420" fill="none" xmlns="http://www.w3.org/2000/svg" className="character-svg">
       {/* Background card */}
       <rect x="20" y="10" width="280" height="380" rx="32" fill={color} opacity="0.12" />
@@ -242,37 +242,31 @@ const characters = {
 
       <ellipse cx="160" cy="385" rx="60" ry="12" fill="rgba(0,0,0,0.15)" />
 
-      {/* Body / Smart shirt + vest */}
-      <path d="M105 268 Q105 242 125 230 L160 218 L195 230 Q215 242 215 268 L215 360 Q215 372 205 372 L115 372 Q105 372 105 360 Z" fill="#E0E0E8" />
-      {/* Vest */}
-      <path d="M105 268 Q105 242 125 230 L145 222 L145 372 L115 372 Q105 372 105 360 Z" fill={color} />
-      <path d="M215 268 Q215 242 195 230 L175 222 L175 372 L205 372 Q215 372 215 360 Z" fill={color} />
-      {/* Vest buttons */}
-      <circle cx="160" cy="280" r="3.5" fill="rgba(0,0,0,0.2)" />
-      <circle cx="160" cy="310" r="3.5" fill="rgba(0,0,0,0.2)" />
-      <circle cx="160" cy="340" r="3.5" fill="rgba(0,0,0,0.2)" />
-      {/* Tie */}
-      <path d="M155 232 L160 240 L165 232" fill={color} />
-      <path d="M156 240 L160 310 L164 240" fill={color} opacity="0.7" />
+      {/* Body / Hoodie */}
+      <path d="M105 268 Q105 242 125 230 L160 218 L195 230 Q215 242 215 268 L215 360 Q215 372 205 372 L115 372 Q105 372 105 360 Z" fill={color} />
+      {/* Hoodie pocket */}
+      <rect x="130" y="310" width="60" height="30" rx="8" fill="rgba(0,0,0,0.1)" />
+      {/* Hoodie strings */}
+      <line x1="148" y1="232" x2="148" y2="268" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeLinecap="round" />
+      <line x1="172" y1="232" x2="172" y2="268" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeLinecap="round" />
 
       {/* Neck */}
-      <rect x="146" y="200" width="28" height="26" rx="10" fill="#F0C0A0" />
+      <rect x="146" y="200" width="28" height="26" rx="10" fill="#8D6E4C" />
 
       {/* Head */}
-      <ellipse cx="160" cy="148" rx="62" ry="68" fill="#F5D0B0" />
+      <ellipse cx="160" cy="148" rx="62" ry="68" fill="#A0825E" />
 
-      {/* Hair - neat professional with beret/hat */}
-      <path d="M100 142 Q98 85 160 72 Q222 85 220 142 Q218 110 202 95 Q180 78 160 78 Q140 78 118 95 Q102 110 100 142 Z" fill="#2D2D3D" />
-      {/* Beret */}
-      <ellipse cx="160" cy="78" rx="65" ry="22" fill={color} />
-      <ellipse cx="160" cy="75" rx="58" ry="18" fill={color} />
-      <circle cx="160" cy="58" r="6" fill={color} />
-      {/* Beret shadow */}
-      <path d="M100 80 Q130 90 160 88 Q190 90 220 80" stroke="rgba(0,0,0,0.15)" strokeWidth="2" fill="none" />
+      {/* Hair - short curly */}
+      <path d="M100 140 Q98 82 160 70 Q222 82 220 140 Q218 108 200 92 Q180 76 160 76 Q140 76 120 92 Q102 108 100 140 Z" fill="#1a1a2e" />
+      <circle cx="110" cy="100" r="12" fill="#1a1a2e" />
+      <circle cx="135" cy="82" r="14" fill="#1a1a2e" />
+      <circle cx="160" cy="76" r="13" fill="#1a1a2e" />
+      <circle cx="185" cy="82" r="14" fill="#1a1a2e" />
+      <circle cx="210" cy="100" r="12" fill="#1a1a2e" />
 
       {/* Ears */}
-      <ellipse cx="99" cy="158" rx="10" ry="14" fill="#E8B898" />
-      <ellipse cx="221" cy="158" rx="10" ry="14" fill="#E8B898" />
+      <ellipse cx="99" cy="158" rx="10" ry="14" fill="#946B4A" />
+      <ellipse cx="221" cy="158" rx="10" ry="14" fill="#946B4A" />
 
       {/* Eyes */}
       <ellipse cx="138" cy="155" rx="12" ry="13" fill="white" />
@@ -283,38 +277,96 @@ const characters = {
       <circle cx="187" cy="154" r="2.5" fill="white" />
 
       {/* Eyebrows */}
-      <path d="M124 140 Q138 133 150 138" stroke="#2D2D3D" strokeWidth="3" strokeLinecap="round" fill="none" />
-      <path d="M170 138 Q182 133 196 140" stroke="#2D2D3D" strokeWidth="3" strokeLinecap="round" fill="none" />
+      <path d="M124 140 Q138 133 150 138" stroke="#1a1a2e" strokeWidth="3" strokeLinecap="round" fill="none" />
+      <path d="M170 138 Q182 133 196 140" stroke="#1a1a2e" strokeWidth="3" strokeLinecap="round" fill="none" />
 
-      {/* Cat-eye / angular glasses */}
-      <path d="M118 148 L118 165 Q118 172 125 172 L152 172 Q158 172 158 165 L158 150 Q158 143 152 143 L125 143 Q118 143 118 148 Z" stroke={color} strokeWidth="2.5" fill="none" />
-      <path d="M162 148 L162 165 Q162 172 168 172 L195 172 Q202 172 202 165 L202 150 Q202 143 195 143 L168 143 Q162 143 162 148 Z" stroke={color} strokeWidth="2.5" fill="none" />
-      {/* Cat-eye wings */}
-      <path d="M118 145 L110 140" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M202 145 L210 140" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
-      <line x1="158" y1="156" x2="162" y2="156" stroke={color} strokeWidth="2" />
+      {/* Round glasses */}
+      <circle cx="138" cy="157" r="18" stroke={color} strokeWidth="2.5" fill="none" />
+      <circle cx="182" cy="157" r="18" stroke={color} strokeWidth="2.5" fill="none" />
+      <line x1="156" y1="155" x2="164" y2="155" stroke={color} strokeWidth="2" />
+      <line x1="120" y1="152" x2="110" y2="148" stroke={color} strokeWidth="2" strokeLinecap="round" />
+      <line x1="200" y1="152" x2="210" y2="148" stroke={color} strokeWidth="2" strokeLinecap="round" />
 
       {/* Nose */}
-      <path d="M158 170 Q160 180 164 180" stroke="#D4A088" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M158 170 Q160 180 164 180" stroke="#7A5C3E" strokeWidth="2" strokeLinecap="round" fill="none" />
 
       {/* Smile */}
-      <path d="M142 192 Q160 204 178 192" stroke="#C4887A" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-      {/* Dimple */}
-      <path d="M178 190 Q180 192 179 194" stroke="#C4887A" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <path d="M142 192 Q160 204 178 192" stroke="#7A5C3E" strokeWidth="2.5" strokeLinecap="round" fill="none" />
 
       {/* Arms */}
       <path d="M105 275 Q78 295 74 325 Q72 345 84 352" stroke={color} strokeWidth="20" strokeLinecap="round" fill="none" />
       <path d="M215 275 Q242 295 246 325 Q248 345 236 352" stroke={color} strokeWidth="20" strokeLinecap="round" fill="none" />
 
       {/* Hands */}
-      <circle cx="84" cy="354" r="14" fill="#F5D0B0" />
-      <circle cx="236" cy="354" r="14" fill="#F5D0B0" />
+      <circle cx="84" cy="354" r="14" fill="#A0825E" />
+      <circle cx="236" cy="354" r="14" fill="#A0825E" />
 
-      {/* Clipboard in left hand */}
-      <rect x="68" y="340" width="28" height="36" rx="3" fill="#F5F5F5" stroke="#ddd" strokeWidth="1" />
-      <line x1="74" y1="350" x2="90" y2="350" stroke="#ccc" strokeWidth="2" strokeLinecap="round" />
-      <line x1="74" y1="356" x2="86" y2="356" stroke="#ccc" strokeWidth="2" strokeLinecap="round" />
-      <line x1="74" y1="362" x2="88" y2="362" stroke="#ccc" strokeWidth="2" strokeLinecap="round" />
+      {/* Credit card in right hand */}
+      <rect x="222" y="340" width="32" height="22" rx="3" fill="#fff" stroke="#ddd" strokeWidth="1" />
+      <rect x="226" y="346" width="14" height="4" rx="1" fill={color} opacity="0.6" />
+      <rect x="226" y="353" width="24" height="2" rx="1" fill="#ddd" />
+    </svg>
+  ),
+  tesla: ({ color }) => (
+    <svg viewBox="0 0 320 420" fill="none" xmlns="http://www.w3.org/2000/svg" className="character-svg">
+      {/* Background card */}
+      <rect x="20" y="10" width="280" height="380" rx="32" fill={color} opacity="0.12" />
+      <rect x="20" y="10" width="280" height="380" rx="32" stroke={color} strokeWidth="1" opacity="0.2" />
+
+      <ellipse cx="160" cy="385" rx="60" ry="12" fill="rgba(0,0,0,0.15)" />
+
+      {/* Body / Jumpsuit */}
+      <path d="M105 268 Q105 242 125 230 L160 218 L195 230 Q215 242 215 268 L215 360 Q215 372 205 372 L115 372 Q105 372 105 360 Z" fill="#2a2a2a" />
+      {/* Tesla logo on chest */}
+      <path d="M152 260 L160 245 L168 260 L164 260 L160 252 L156 260 Z" fill={color} />
+      {/* Collar */}
+      <path d="M140 230 Q160 240 180 230" stroke="#444" strokeWidth="2" fill="none" />
+
+      {/* Neck */}
+      <rect x="146" y="200" width="28" height="26" rx="10" fill="#D4A574" />
+
+      {/* Head */}
+      <ellipse cx="160" cy="148" rx="62" ry="68" fill="#E0B88A" />
+
+      {/* Hair - short styled */}
+      <path d="M100 140 Q98 82 160 70 Q222 82 220 140 Q218 108 200 92 Q180 76 160 76 Q140 76 120 92 Q102 108 100 140 Z" fill="#3D2B1F" />
+      <path d="M100 140 Q105 125 115 118 Q108 135 100 140 Z" fill="#3D2B1F" />
+      <path d="M220 140 Q215 125 205 118 Q212 135 220 140 Z" fill="#3D2B1F" />
+
+      {/* Ears */}
+      <ellipse cx="99" cy="158" rx="10" ry="14" fill="#D4A574" />
+      <ellipse cx="221" cy="158" rx="10" ry="14" fill="#D4A574" />
+
+      {/* Eyes */}
+      <ellipse cx="138" cy="155" rx="12" ry="13" fill="white" />
+      <ellipse cx="182" cy="155" rx="12" ry="13" fill="white" />
+      <ellipse cx="140" cy="157" rx="7" ry="8" fill="#2D1810" />
+      <ellipse cx="184" cy="157" rx="7" ry="8" fill="#2D1810" />
+      <circle cx="143" cy="154" r="2.5" fill="white" />
+      <circle cx="187" cy="154" r="2.5" fill="white" />
+
+      {/* Eyebrows */}
+      <path d="M124 140 Q138 133 150 138" stroke="#3D2B1F" strokeWidth="3" strokeLinecap="round" fill="none" />
+      <path d="M170 138 Q182 133 196 140" stroke="#3D2B1F" strokeWidth="3" strokeLinecap="round" fill="none" />
+
+      {/* Nose */}
+      <path d="M158 170 Q160 180 164 180" stroke="#B8865A" strokeWidth="2" strokeLinecap="round" fill="none" />
+
+      {/* Confident smile */}
+      <path d="M140 192 Q160 206 180 192" stroke="#B8865A" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      <path d="M145 192 Q160 200 175 192" fill="#fff" opacity="0.5" />
+
+      {/* Arms */}
+      <path d="M105 275 Q78 295 74 325 Q72 345 84 352" stroke="#2a2a2a" strokeWidth="20" strokeLinecap="round" fill="none" />
+      <path d="M215 275 Q242 295 246 325 Q248 345 236 352" stroke="#2a2a2a" strokeWidth="20" strokeLinecap="round" fill="none" />
+
+      {/* Hands */}
+      <circle cx="84" cy="354" r="14" fill="#E0B88A" />
+      <circle cx="236" cy="354" r="14" fill="#E0B88A" />
+
+      {/* Wrench in hand */}
+      <rect x="224" y="338" width="6" height="30" rx="2" fill="#888" />
+      <circle cx="227" cy="336" r="8" stroke="#888" strokeWidth="3" fill="none" />
     </svg>
   ),
 }

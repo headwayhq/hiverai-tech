@@ -50,10 +50,10 @@ const agent = {
     },
   ],
   demoMessages: [
-    { role: 'user', text: "I can't find where to set up email delegation in Hiver" },
-    { role: 'agent', text: "I can help with that! Email delegation in Hiver is set up through the Shared Mailbox settings. Go to Hiver Admin Panel → Shared Mailboxes → Select your mailbox → Delegation Rules. Would you like me to walk you through creating your first delegation rule?" },
-    { role: 'user', text: 'Yes please!' },
-    { role: 'agent', text: 'Great! In the Delegation Rules section, click "+ New Rule". You can set conditions like subject keywords, sender domain, or labels — and assign them to specific team members automatically. This ensures every email reaches the right person without manual sorting.' },
+    { role: 'user', text: 'How to add new users on Hiver?' },
+    { role: 'agent', text: "To add a new user to your Hiver account and a shared inbox, please follow these steps:\n\n1. Go to the Hiver Admin Panel.\n2. Select Users and Roles.\n3. Click Add User.\n4. Enter the user's email address.\n5. Assign a role — Admin or Member.\n6. Add the user to the required shared inbox.\n7. Click Save.\n\nThe user will receive:\n• One email inviting them to join Hiver\n• One email confirming their addition to the shared inbox\n\nIf you need help with role selection or permissions, I can guide you further." },
+    { role: 'user', text: 'What permissions do Members have?' },
+    { role: 'agent', text: "In Hiver, a Member has access to work on conversations within the shared inboxes they are added to, but they do not have administrative privileges.\n\nSpecifically:\n\n• No SLA access by default — Members cannot create, edit, prioritize, disable, or manually remove SLA policies.\n• Only Admins and Shared Inbox Admins have SLA permissions by default.\n• If needed, SLA-related permissions can be granted to a Member using a custom role from the Admin Panel.\n\nMembers focus on handling emails, while configuration and policy controls remain with Admin-level roles." },
   ],
 }
 

@@ -136,6 +136,18 @@
   fill: var(--accent-orange);
 }
 
+.agent-card-competitor {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--radius-xl);
+  background: rgba(104, 52, 240, 0.1);
+  color: #6834F0;
+  font-size: 11px;
+  font-weight: 700;
+}
+
 .agent-directory-card h3 {
   font-size: 22px;
   font-weight: 700;
@@ -171,6 +183,107 @@
   gap: 10px;
 }
 
+/* Competitor section */
+.agents-competitor {
+  position: relative;
+  z-index: 1;
+  padding: 20px 0 100px;
+}
+
+.competitor-section {
+  text-align: center;
+}
+
+.competitor-header {
+  margin-bottom: 32px;
+}
+
+.competitor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-xl);
+  background: rgba(104, 52, 240, 0.1);
+  border: 1px solid rgba(104, 52, 240, 0.2);
+  color: #6834F0;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.competitor-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-bottom: 12px;
+}
+
+.competitor-header p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.competitor-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 48px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(104, 52, 240, 0.06), rgba(104, 52, 240, 0.02));
+  border: 1px solid rgba(104, 52, 240, 0.15);
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.competitor-card:hover {
+  border-color: rgba(104, 52, 240, 0.35);
+  background: linear-gradient(135deg, rgba(104, 52, 240, 0.1), rgba(104, 52, 240, 0.04));
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(104, 52, 240, 0.15);
+}
+
+.competitor-card-left {
+  flex: 1;
+}
+
+.competitor-card-left h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.competitor-card-left .agent-card-tagline {
+  color: #6834F0;
+}
+
+.competitor-card-left p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 560px;
+  margin-top: 12px;
+}
+
+.competitor-card-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6834F0;
+  white-space: nowrap;
+  margin-left: 40px;
+  transition: gap 0.2s;
+}
+
+.competitor-card:hover .competitor-card-right {
+  gap: 12px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .agents-hero h1 {
@@ -179,5 +292,19 @@
 
   .agents-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .competitor-card {
+    flex-direction: column;
+    padding: 32px 24px;
+    gap: 24px;
+  }
+
+  .competitor-card-right {
+    margin-left: 0;
+  }
+
+  .competitor-header h2 {
+    font-size: 28px;
   }
 }

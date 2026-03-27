@@ -88,11 +88,11 @@ function Home() {
               </div>
               <div className="connection-node node-3">
                 <MessageSquare size={16} />
-                <span>Intercom</span>
+                <span>Stripe</span>
               </div>
               <div className="connection-node node-4">
                 <MessageSquare size={16} />
-                <span>Zendesk</span>
+                <span>Tesla</span>
               </div>
             </div>
           </motion.div>

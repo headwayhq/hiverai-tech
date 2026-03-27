@@ -456,123 +456,284 @@
   color: #6b6b6b;
 }
 
-/* ===== ZENDESK THEME — Dark teal/green, warm feel ===== */
-.agent-theme-zendesk {
-  background: #03363D;
+/* ===== STRIPE THEME — Light with indigo/purple accent ===== */
+.agent-theme-stripe {
+  background: #f6f5ff;
 }
 
-.agent-theme-zendesk .agent-page-bg .orb-main {
-  background: #78A9AF;
-  opacity: 0.08;
+.agent-theme-stripe .agent-page-bg .orb-main,
+.agent-theme-stripe .agent-page-bg .orb-secondary {
+  display: none;
 }
 
-.agent-theme-zendesk .agent-page-bg .orb-secondary {
-  background: #49797E;
-  opacity: 0.05;
+.agent-theme-stripe .agent-page-hero-text h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1a1a2e;
 }
 
-.agent-theme-zendesk .agent-page-badge {
-  background: rgba(120, 169, 175, 0.12);
-  border-color: rgba(120, 169, 175, 0.2);
-  color: #A8D4D8;
+.agent-theme-stripe .agent-page-subtitle {
+  color: #6b6b80;
 }
 
-.agent-theme-zendesk .agent-page-hero-text h1 {
-  color: #F3F8F8;
+.agent-theme-stripe .section-header h2 {
+  color: #1a1a2e;
 }
 
-.agent-theme-zendesk .agent-page-subtitle {
-  color: #A8C5C8;
+.agent-theme-stripe .section-header p {
+  color: #6b6b80;
 }
 
-.agent-theme-zendesk .agent-feature-pill {
-  background: rgba(120, 169, 175, 0.08);
-  border-color: rgba(120, 169, 175, 0.15);
-  color: #A8C5C8;
+.agent-theme-stripe .agent-page-badge {
+  background: rgba(99, 91, 255, 0.06);
+  border-color: rgba(99, 91, 255, 0.15);
+  color: #635BFF;
 }
 
-.agent-theme-zendesk .feature-check {
-  color: #68B5BA;
+.agent-theme-stripe .agent-feature-pill {
+  background: #eeedf5;
+  border-color: #e0dfe8;
+  color: #1a1a2e;
 }
 
-.agent-theme-zendesk .capability-card {
+.agent-theme-stripe .feature-check {
+  color: #635BFF;
+}
+
+.agent-theme-stripe .capability-card {
+  background: #fff;
+  border-color: #e0dfe8;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.agent-theme-stripe .capability-card:hover {
+  background: #fff;
+  border-color: #d0cfe0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.agent-theme-stripe .capability-icon {
+  color: #635BFF;
+}
+
+.agent-theme-stripe .capability-card h3 {
+  color: #1a1a2e;
+}
+
+.agent-theme-stripe .capability-card p {
+  color: #6b6b80;
+}
+
+.agent-theme-stripe .demo-chat {
+  background: #fff;
+  border-color: #e0dfe8;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.agent-theme-stripe .demo-chat-header {
+  background: #eeedf5;
+  border-color: #e0dfe8;
+  color: #1a1a2e;
+}
+
+.agent-theme-stripe .demo-chat-status {
+  color: #34C759;
+}
+
+.agent-theme-stripe .demo-msg.agent .demo-msg-bubble {
+  background: #eeedf5;
+  color: #1a1a2e;
+}
+
+.agent-theme-stripe .demo-msg.user .demo-msg-bubble {
+  background: #635BFF;
+  color: #fff;
+}
+
+.agent-theme-stripe .demo-chat-input {
+  border-color: #e0dfe8;
+}
+
+.agent-theme-stripe .demo-chat-input input {
+  background: #eeedf5;
+  border-color: #e0dfe8;
+  color: #1a1a2e;
+}
+
+.agent-theme-stripe .demo-chat-input input::placeholder {
+  color: #a8a8b8;
+}
+
+.agent-theme-stripe .demo-chat-send {
+  background: #635BFF;
+}
+
+.agent-theme-stripe .bubble-cta {
+  background: #eeedf5;
+  border-color: #e0dfe8;
+}
+
+.agent-theme-stripe .bubble-cta-glow {
+  display: none;
+}
+
+.agent-theme-stripe .bubble-cta h2 {
+  color: #1a1a2e;
+}
+
+.agent-theme-stripe .bubble-cta p {
+  color: #6b6b80;
+}
+
+.agent-theme-stripe .bubble-cta-icon {
+  color: #635BFF;
+}
+
+.agent-theme-stripe .bubble-pointer-dot {
+  background: #635BFF;
+  box-shadow: 0 0 30px rgba(99, 91, 255, 0.3);
+}
+
+.agent-theme-stripe .bubble-pointer-line {
+  background: linear-gradient(to bottom, #635BFF, transparent);
+}
+
+.agent-theme-stripe .character-status {
+  background: #fff;
+  border-color: #e0dfe8;
+  color: #6b6b80;
+}
+
+/* ===== TESLA THEME — Dark with red accent ===== */
+.agent-theme-tesla {
+  background: #0a0a0a;
+}
+
+.agent-theme-tesla .agent-page-bg .orb-main {
+  background: #e82127;
+  opacity: 0.06;
+}
+
+.agent-theme-tesla .agent-page-bg .orb-secondary {
+  background: #e82127;
+  opacity: 0.03;
+}
+
+.agent-theme-tesla .agent-page-hero-text h1 {
+  color: #f5f5f5;
+}
+
+.agent-theme-tesla .agent-page-subtitle {
+  color: #999;
+}
+
+.agent-theme-tesla .section-header h2 {
+  color: #f5f5f5;
+}
+
+.agent-theme-tesla .section-header p {
+  color: #999;
+}
+
+.agent-theme-tesla .agent-page-badge {
+  background: rgba(232, 33, 39, 0.08);
+  border-color: rgba(232, 33, 39, 0.2);
+  color: #e82127;
+}
+
+.agent-theme-tesla .agent-feature-pill {
   background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(120, 169, 175, 0.12);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ccc;
 }
 
-.agent-theme-zendesk .capability-card:hover {
-  background: rgba(120, 169, 175, 0.08);
-  border-color: rgba(120, 169, 175, 0.2);
+.agent-theme-tesla .feature-check {
+  color: #e82127;
 }
 
-.agent-theme-zendesk .capability-icon {
-  color: #68B5BA;
+.agent-theme-tesla .capability-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
-.agent-theme-zendesk .capability-card h3 {
-  color: #E8F4F5;
+.agent-theme-tesla .capability-card:hover {
+  background: rgba(232, 33, 39, 0.05);
+  border-color: rgba(232, 33, 39, 0.2);
+  transform: translateY(-4px);
 }
 
-.agent-theme-zendesk .capability-card p {
-  color: #8EB5B8;
+.agent-theme-tesla .capability-icon {
+  color: #e82127;
 }
 
-.agent-theme-zendesk .section-header h2 {
-  color: #E8F4F5;
+.agent-theme-tesla .capability-card h3 {
+  color: #f5f5f5;
 }
 
-.agent-theme-zendesk .section-header p {
-  color: #8EB5B8;
+.agent-theme-tesla .capability-card p {
+  color: #999;
 }
 
-.agent-theme-zendesk .demo-chat {
-  background: #04444D;
-  border-color: rgba(120, 169, 175, 0.15);
+.agent-theme-tesla .demo-chat {
+  background: #141414;
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
-.agent-theme-zendesk .demo-chat-header {
-  background: #03363D;
-  border-color: rgba(120, 169, 175, 0.12);
+.agent-theme-tesla .demo-chat-header {
+  background: #0a0a0a;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #f5f5f5;
 }
 
-.agent-theme-zendesk .demo-msg.agent .demo-msg-bubble {
-  background: rgba(120, 169, 175, 0.12);
+.agent-theme-tesla .demo-msg.agent .demo-msg-bubble {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e5e5e5;
 }
 
-.agent-theme-zendesk .demo-msg.user .demo-msg-bubble {
-  background: #68B5BA;
+.agent-theme-tesla .demo-msg.user .demo-msg-bubble {
+  background: #e82127;
+  color: #fff;
 }
 
-.agent-theme-zendesk .demo-chat-input input {
-  background: rgba(120, 169, 175, 0.08);
-  border-color: rgba(120, 169, 175, 0.15);
-  color: #E8F4F5;
+.agent-theme-tesla .demo-chat-input input {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #f5f5f5;
 }
 
-.agent-theme-zendesk .demo-chat-send {
-  background: #68B5BA;
+.agent-theme-tesla .demo-chat-input input::placeholder {
+  color: #666;
 }
 
-.agent-theme-zendesk .bubble-cta {
-  background: #04444D;
-  border-color: rgba(120, 169, 175, 0.18);
+.agent-theme-tesla .demo-chat-send {
+  background: #e82127;
 }
 
-.agent-theme-zendesk .bubble-cta h2 {
-  color: #E8F4F5;
+.agent-theme-tesla .bubble-cta {
+  background: #141414;
+  border-color: rgba(232, 33, 39, 0.2);
 }
 
-.agent-theme-zendesk .bubble-cta p {
-  color: #8EB5B8;
+.agent-theme-tesla .bubble-cta h2 {
+  color: #f5f5f5;
 }
 
-.agent-theme-zendesk .bubble-cta-icon {
-  color: #68B5BA;
+.agent-theme-tesla .bubble-cta p {
+  color: #999;
 }
 
-.agent-theme-zendesk .bubble-pointer-dot {
-  background: #68B5BA;
-  box-shadow: 0 0 30px rgba(104, 181, 186, 0.4);
+.agent-theme-tesla .bubble-cta-icon {
+  color: #e82127;
+}
+
+.agent-theme-tesla .bubble-pointer-dot {
+  background: #e82127;
+  box-shadow: 0 0 30px rgba(232, 33, 39, 0.4);
+}
+
+.agent-theme-tesla .bubble-pointer-line {
+  background: linear-gradient(to bottom, #e82127, transparent);
 }
 
 .agent-page-bg {

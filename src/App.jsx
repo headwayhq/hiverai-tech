@@ -9,7 +9,8 @@ import Integrations from './pages/Integrations'
 import AgentHiver from './pages/AgentHiver'
 import AgentApple from './pages/AgentApple'
 import AgentIntercom from './pages/AgentIntercom'
-import AgentZendesk from './pages/AgentZendesk'
+import AgentStripe from './pages/AgentStripe'
+import AgentTesla from './pages/AgentTesla'
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
         <Route path="/agents/hiver" element={<AgentHiver />} />
         <Route path="/agents/apple" element={<AgentApple />} />
         <Route path="/agents/intercom" element={<AgentIntercom />} />
-        <Route path="/agents/zendesk" element={<AgentZendesk />} />
+        <Route path="/agents/stripe" element={<AgentStripe />} />
+        <Route path="/agents/tesla" element={<AgentTesla />} />
         <Route path="/integrations" element={<Integrations />} />
       </Routes>
       <Footer />
