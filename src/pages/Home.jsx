@@ -72,30 +72,35 @@ function Home() {
           >
             <div className="agent-brain">
               <div className="brain-core">
-                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
+                <svg viewBox="0 0 80 68" fill="none" xmlns="http://www.w3.org/2000/svg" width="90" height="78">
                   {/* Head */}
-                  <circle cx="40" cy="28" r="16" fill="#fff" opacity="0.9" />
+                  <circle cx="40" cy="28" r="22" fill="#fff" opacity="0.9" />
                   {/* Hair */}
-                  <path d="M24 26 Q24 12 40 12 Q56 12 56 26 Q54 18 48 14 Q44 12 40 12 Q36 12 32 14 Q26 18 24 26 Z" fill="#2D2D3D" />
+                  <path d="M18 26 Q18 8 40 6 Q62 8 62 26 Q60 16 52 10 Q46 6 40 6 Q34 6 28 10 Q20 16 18 26 Z" fill="#2D2D3D" />
                   {/* Eyes */}
-                  <circle cx="34" cy="28" r="2.5" fill="#1a1a2e" />
-                  <circle cx="46" cy="28" r="2.5" fill="#1a1a2e" />
-                  <circle cx="35" cy="27" r="1" fill="#fff" />
-                  <circle cx="47" cy="27" r="1" fill="#fff" />
+                  <circle cx="32" cy="28" r="3.5" fill="#1a1a2e" />
+                  <circle cx="48" cy="28" r="3.5" fill="#1a1a2e" />
+                  <circle cx="33.5" cy="26.5" r="1.5" fill="#fff" />
+                  <circle cx="49.5" cy="26.5" r="1.5" fill="#fff" />
+                  {/* Eyebrows */}
+                  <path d="M26 22 Q32 18 37 22" stroke="#2D2D3D" strokeWidth="2" strokeLinecap="round" fill="none" />
+                  <path d="M43 22 Q48 18 54 22" stroke="#2D2D3D" strokeWidth="2" strokeLinecap="round" fill="none" />
+                  {/* Nose */}
+                  <path d="M39 33 Q40 36 42 36" stroke="#D4A088" strokeWidth="1.5" strokeLinecap="round" fill="none" />
                   {/* Smile */}
-                  <path d="M35 34 Q40 38 45 34" stroke="#C4887A" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+                  <path d="M33 40 Q40 46 47 40" stroke="#C4887A" strokeWidth="2" strokeLinecap="round" fill="none" />
                   {/* Body */}
-                  <path d="M28 44 Q28 40 32 38 L40 36 L48 38 Q52 40 52 44 L52 58 Q52 60 50 60 L30 60 Q28 60 28 58 Z" fill="#ff6b2b" />
+                  <path d="M24 58 Q24 52 30 48 L40 44 L50 48 Q56 52 56 58 L56 68 L24 68 Z" fill="#ff6b2b" />
                   {/* Headset */}
-                  <path d="M23 26 Q23 16 40 16 Q57 16 57 26" stroke="#8b5cf6" strokeWidth="2.5" fill="none" />
-                  <rect x="20" y="24" width="5" height="8" rx="2.5" fill="#8b5cf6" />
-                  <rect x="55" y="24" width="5" height="8" rx="2.5" fill="#8b5cf6" />
+                  <path d="M16 26 Q16 10 40 8 Q64 10 64 26" stroke="#8b5cf6" strokeWidth="3" fill="none" />
+                  <rect x="12" y="22" width="6" height="10" rx="3" fill="#8b5cf6" />
+                  <rect x="62" y="22" width="6" height="10" rx="3" fill="#8b5cf6" />
                   {/* Mic */}
-                  <path d="M20 30 Q16 32 17 36" stroke="#8b5cf6" strokeWidth="2" strokeLinecap="round" fill="none" />
-                  <circle cx="17" cy="37" r="2" fill="#8b5cf6" />
-                  {/* AI sparkle on shoulder */}
-                  <path d="M52 42 L54 40 L56 42 L54 44 Z" fill="#fff" opacity="0.8" />
-                  <path d="M26 42 L28 40 L30 42 L28 44 Z" fill="#fff" opacity="0.6" />
+                  <path d="M12 30 Q7 33 8 38" stroke="#8b5cf6" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                  <circle cx="8" cy="40" r="3" fill="#8b5cf6" />
+                  {/* AI sparkles */}
+                  <path d="M58 48 L60 45 L62 48 L60 51 Z" fill="#fff" opacity="0.8" />
+                  <path d="M20 48 L22 45 L24 48 L22 51 Z" fill="#fff" opacity="0.6" />
                 </svg>
               </div>
               <div className="brain-ring ring-1" />

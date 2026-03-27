@@ -65,128 +65,89 @@ function AgentPage({ agent }) {
         </div>
       </section>
 
-      {/* What it can do */}
-      <section className="agent-page-capabilities">
+      {/* Demo + CTA two-column */}
+      <section className="agent-page-demo-cta">
         <div className="container">
-          <motion.div
-            className="section-header"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-          >
-            <h2>What {agent.name} Can Do</h2>
-            <p>{agent.capabilitiesSubtitle}</p>
-          </motion.div>
-
-          <div className="capabilities-grid">
-            {agent.capabilities.map((cap, i) => (
-              <motion.div
-                key={i}
-                className="capability-card"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                custom={i}
-              >
-                <div className="capability-icon">{cap.icon}</div>
-                <h3>{cap.title}</h3>
-                <p>{cap.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sample conversation */}
-      <section className="agent-page-demo">
-        <div className="container">
-          <motion.div
-            className="section-header"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-          >
-            <h2>See It In Action</h2>
-            <p>A real conversation with {agent.name}</p>
-          </motion.div>
-
-          <motion.div
-            className="demo-chat"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-          >
-            <div className="demo-chat-header">
-              <div className="demo-chat-dot" />
-              <span>{agent.name}</span>
-              <span className="demo-chat-status">Online</span>
-            </div>
-            <div className="demo-chat-messages">
-              {agent.demoMessages.map((msg, i) => (
-                <motion.div
-                  key={i}
-                  className={`demo-msg ${msg.role}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.12 }}
-                >
-                  {msg.role === 'agent' && (
-                    <div className="demo-msg-avatar">
-                      <Bot size={14} />
-                    </div>
-                  )}
-                  <div className="demo-msg-bubble">{msg.text}</div>
-                </motion.div>
-              ))}
-            </div>
-            <div className="demo-chat-input">
-              <input type="text" placeholder="Type a message..." disabled />
-              <button className="demo-chat-send">
-                <Send size={14} />
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Huge CTA — try the bubble */}
-      <section className="agent-page-cta">
-        <div className="container">
-          <motion.div
-            className="bubble-cta"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="bubble-cta-glow" />
+          <div className="demo-cta-grid">
+            {/* Left: Demo chat */}
             <motion.div
-              className="bubble-cta-icon"
-              animate={{ y: [0, 8, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
+              className="demo-cta-left"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
             >
-              <ArrowDown size={32} />
+              <h2>See It In Action</h2>
+              <p className="demo-cta-subtitle">A real conversation with {agent.name}</p>
+
+              <div className="demo-chat">
+                <div className="demo-chat-header">
+                  <div className="demo-chat-dot" />
+                  <span>{agent.name}</span>
+                  <span className="demo-chat-status">Online</span>
+                </div>
+                <div className="demo-chat-messages">
+                  {agent.demoMessages.map((msg, i) => (
+                    <motion.div
+                      key={i}
+                      className={`demo-msg ${msg.role}`}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.12 }}
+                    >
+                      {msg.role === 'agent' && (
+                        <div className="demo-msg-avatar">
+                          <Bot size={14} />
+                        </div>
+                      )}
+                      <div className="demo-msg-bubble">{msg.text}</div>
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="demo-chat-input">
+                  <input type="text" placeholder="Type a message..." disabled />
+                  <button className="demo-chat-send">
+                    <Send size={14} />
+                  </button>
+                </div>
+              </div>
             </motion.div>
-            <h2>Try {agent.name} Right Now</h2>
-            <p>Click the chat bubble in the bottom-right corner to start a conversation.</p>
-            <div className="bubble-pointer">
-              <div className="bubble-pointer-line" />
-              <motion.div
-                className="bubble-pointer-dot"
-                animate={{ scale: [1, 1.4, 1], opacity: [0.7, 1, 0.7] }}
-                transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-              />
-              <svg className="bubble-pointer-arrow" viewBox="0 0 60 60" width="60" height="60">
-                <path d="M10 10 Q30 30 50 50" stroke={agent.color} strokeWidth="2" fill="none" strokeDasharray="4 4" />
-                <path d="M40 48 L50 50 L48 40" stroke={agent.color} strokeWidth="2" fill="none" />
-              </svg>
-            </div>
-          </motion.div>
+
+            {/* Right: CTA */}
+            <motion.div
+              className="demo-cta-right"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="bubble-cta">
+                <div className="bubble-cta-glow" />
+                <motion.div
+                  className="bubble-cta-icon"
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
+                >
+                  <ArrowDown size={32} />
+                </motion.div>
+                <h2>Try {agent.name} Right Now</h2>
+                <p>Click the chat bubble in the bottom-right corner to start a conversation.</p>
+                <div className="bubble-pointer">
+                  <div className="bubble-pointer-line" />
+                  <motion.div
+                    className="bubble-pointer-dot"
+                    animate={{ scale: [1, 1.4, 1], opacity: [0.7, 1, 0.7] }}
+                    transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+                  />
+                  <svg className="bubble-pointer-arrow" viewBox="0 0 60 60" width="60" height="60">
+                    <path d="M10 10 Q30 30 50 50" stroke={agent.color} strokeWidth="2" fill="none" strokeDasharray="4 4" />
+                    <path d="M40 48 L50 50 L48 40" stroke={agent.color} strokeWidth="2" fill="none" />
+                  </svg>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>

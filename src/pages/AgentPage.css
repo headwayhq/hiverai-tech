@@ -886,16 +886,43 @@
   line-height: 1.6;
 }
 
-/* Demo chat */
-.agent-page-demo {
+/* Demo + CTA two-column */
+.agent-page-demo-cta {
   position: relative;
   z-index: 1;
-  padding: 60px 0;
+  padding: 60px 0 120px;
+}
+
+.demo-cta-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.demo-cta-left h2 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.demo-cta-subtitle {
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.demo-cta-right {
+  position: sticky;
+  top: 120px;
+}
+
+.demo-cta-right .bubble-cta {
+  padding: 60px 32px;
 }
 
 .demo-chat {
-  max-width: 560px;
-  margin: 0 auto;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-subtle);
   background: var(--bg-card);
@@ -1012,13 +1039,7 @@
   opacity: 0.8;
 }
 
-/* ===== HUGE BUBBLE CTA ===== */
-.agent-page-cta {
-  position: relative;
-  z-index: 1;
-  padding: 60px 0 120px;
-}
-
+/* ===== BUBBLE CTA ===== */
 .bubble-cta {
   position: relative;
   text-align: center;
@@ -1124,8 +1145,12 @@
     order: -1;
   }
 
-  .capabilities-grid {
+  .demo-cta-grid {
     grid-template-columns: 1fr;
+  }
+
+  .demo-cta-right {
+    position: static;
   }
 
   .bubble-cta h2 {

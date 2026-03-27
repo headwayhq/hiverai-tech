@@ -52,8 +52,10 @@ const agent = {
     },
   ],
   demoMessages: [
-    { role: 'user', text: 'My AirPods Pro keep disconnecting from my Mac' },
-    { role: 'agent', text: "I understand how disruptive that can be. While the knowledge base does not list detailed step-by-step troubleshooting for AirPods Pro disconnecting from a Mac, here are the supported recovery actions referenced in Apple Support:\n\n• Reconnect or pair again: Use the pairing steps to reconnect your AirPods to your Mac.\n• If they won't stay connected, restart or reset your AirPods, then pair them again.\n• Ensure your AirPods are adequately charged, as low battery can affect connectivity.\n• If the issue persists, you can start a repair request at getsupport.apple.com or use the Apple Support app for guided help.\n\nIf you'd like, I can guide you through the reset and re-pairing process." },
+    { role: 'user', text: 'I have a budget of 2 lac and what are the devices I can purchase for my workspace?' },
+    { role: 'agent', text: "With a budget of ₹2,00,000, you have several strong workspace options based on current pricing:\n\n✅ Option 1: MacBook Pro (High Performance)\nMacBook Pro 14\" (M5) — From ₹1,89,900\nUp to 6 months No Cost EMI + up to ₹10,000 instant cashback. Ideal for sustained performance and professional workloads.\n\n✅ Option 2: MacBook Air + Accessories\nMacBook Air (M5) — From ₹1,19,900\nAdd AppleCare+, external storage, or accessories within remaining budget.\n\n✅ Option 3: MacBook Neo (Value-Focused)\nMacBook Neo — From ₹69,900\nAllocate remaining budget toward accessories or additional Apple devices.\n\nIf you share your primary work use, I can narrow this down." },
+    { role: 'user', text: 'Compare Air and Neo' },
+    { role: 'agent', text: "Here's a spec-based comparison:\n\n💰 Starting Price\n• Neo: ₹69,900 (₹59,900 education)\n• Air (M5): ₹1,19,900\n\n⚡ Chip & Performance\n• Neo: A18 Pro — 6-core CPU, 5-core GPU, 16-core Neural Engine\n• Air: M5 — 10-core CPU, 8/10-core GPU, 16-core Neural Engine\nAir offers significantly higher CPU and GPU core counts.\n\n🔌 Ports & Connectivity\n• Neo: 1× USB 3 (USB-C), 1× USB 2 (USB-C), Wi-Fi 6E\n• Air: 2× Thunderbolt 4, MagSafe 3, Wi-Fi 7, dual display support\n\n⚖️ Weight\n• Neo: 1.23 kg\n\n📌 Summary\nChoose Neo for excellent everyday performance at the most affordable price. Choose Air (M5) for stronger performance, Thunderbolt 4, and dual display support." },
   ],
 }
 
