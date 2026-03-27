@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Database, Brain, GitBranch, Layers, Search, Cpu, ArrowRight } from 'lucide-react'
 import './Technology.css'
@@ -161,9 +162,9 @@ function Technology() {
                 It dynamically decides which connections to query based on the context of each conversation.
                 No rigid workflows. Just intelligent, adaptive decision-making.
               </p>
-              <a href="#get-started" className="btn-primary">
+              <Link to="/agents" className="btn-primary">
                 See It In Action <ArrowRight size={16} />
-              </a>
+              </Link>
             </div>
             <div className="connections-visual">
               <div className="conn-hub">
