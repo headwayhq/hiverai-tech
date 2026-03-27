@@ -52,7 +52,7 @@ function Home() {
 
             <motion.div className="hero-stats" variants={fadeUp} custom={4}>
               <div className="stat">
-                <span className="stat-value">4</span>
+                <span className="stat-value">5</span>
                 <span className="stat-label">Live Agents</span>
               </div>
               <div className="stat-divider" />
