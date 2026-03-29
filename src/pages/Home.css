@@ -5,6 +5,62 @@
   overflow: hidden;
 }
 
+[data-theme="light"] .home-page {
+  background: var(--bg-primary);
+}
+
+[data-theme="light"] .ambient-orb {
+  opacity: 0.08;
+}
+
+[data-theme="light"] .hero-badge {
+  background: rgba(255, 107, 43, 0.08);
+}
+
+[data-theme="light"] .btn-secondary {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+[data-theme="light"] .connection-node {
+  background: var(--bg-card);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .connection-node:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="light"] .node-competitor {
+  background: rgba(104, 52, 240, 0.06);
+}
+
+[data-theme="light"] .brain-ring {
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+[data-theme="light"] .feature-card {
+  background: var(--bg-card);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .feature-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .home-competitor-card {
+  background: linear-gradient(135deg, rgba(104, 52, 240, 0.04), rgba(104, 52, 240, 0.01));
+}
+
+[data-theme="light"] .cta-card {
+  background: linear-gradient(135deg, rgba(255, 107, 43, 0.05), rgba(139, 92, 246, 0.05));
+  border-color: rgba(255, 107, 43, 0.12);
+}
+
 /* Ambient orbs */
 .home-ambient {
   position: fixed;

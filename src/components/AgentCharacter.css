@@ -30,6 +30,11 @@
   color: var(--text-secondary);
 }
 
+[data-theme="light"] .character-status {
+  background: var(--bg-card);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
 .status-dot {
   width: 8px;
   height: 8px;

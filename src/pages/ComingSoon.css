@@ -1,0 +1,205 @@
+/* ===== COMING SOON PAGE — Identity: Purple accent, teaser feel ===== */
+
+.coming-soon-page {
+  background: #080812;
+}
+
+[data-theme="light"] .coming-soon-page {
+  background: var(--bg-primary);
+}
+
+/* Background pattern */
+.coming-soon-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(rgba(139, 92, 246, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+[data-theme="light"] .coming-soon-bg {
+  background-image: radial-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+}
+
+/* Hero */
+.coming-soon-hero {
+  position: relative;
+  z-index: 1;
+  padding: 160px 0 80px;
+  text-align: center;
+}
+
+.coming-soon-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-xl);
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  color: var(--accent-purple);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.coming-soon-hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.coming-soon-gradient-text {
+  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.coming-soon-hero-sub {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid section */
+.coming-soon-grid-section {
+  position: relative;
+  z-index: 1;
+  padding: 20px 0 100px;
+}
+
+/* ===== UPCOMING CARDS ===== */
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.upcoming-card {
+  position: relative;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: rgba(139, 92, 246, 0.04);
+  border: 1px dashed rgba(139, 92, 246, 0.25);
+  transition: all 0.3s;
+}
+
+.upcoming-card:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  background: rgba(139, 92, 246, 0.08);
+  transform: translateY(-4px);
+}
+
+[data-theme="light"] .upcoming-card {
+  background: var(--bg-card);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .upcoming-card:hover {
+  background: var(--bg-card);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.1);
+}
+
+.upcoming-pill {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--radius-xl);
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--accent-purple);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.upcoming-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-purple);
+  margin-bottom: 16px;
+  background: rgba(139, 92, 246, 0.06);
+}
+
+[data-theme="light"] .upcoming-icon {
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.upcoming-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.upcoming-card > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.upcoming-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.upcoming-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.upcoming-tag {
+  padding: 3px 10px;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .upcoming-tag {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.upcoming-eta {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .coming-soon-hero h1 {
+    font-size: 36px;
+  }
+
+  .upcoming-grid {
+    grid-template-columns: 1fr;
+  }
+}

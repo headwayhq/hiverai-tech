@@ -4,6 +4,10 @@
   background: var(--agent-bg, #0a0a12);
 }
 
+[data-theme="light"] .agent-page {
+  background: var(--agent-bg, var(--bg-primary));
+}
+
 /* ===== APPLE THEME — White, clean, minimal like apple.com ===== */
 .agent-theme-apple {
   background: #fbfbfd;
@@ -610,6 +614,98 @@
   background: #0a0a0a;
 }
 
+[data-theme="light"] .agent-theme-tesla {
+  background: #fafafa;
+}
+
+[data-theme="light"] .agent-theme-tesla .agent-page-bg .orb-main {
+  opacity: 0.04;
+}
+
+[data-theme="light"] .agent-theme-tesla .agent-page-bg .orb-secondary {
+  opacity: 0.02;
+}
+
+[data-theme="light"] .agent-theme-tesla .agent-page-hero-text h1 {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .agent-theme-tesla .agent-page-subtitle {
+  color: #6b6b6b;
+}
+
+[data-theme="light"] .agent-theme-tesla .section-header h2 {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .agent-theme-tesla .section-header p {
+  color: #6b6b6b;
+}
+
+[data-theme="light"] .agent-theme-tesla .agent-feature-pill {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #444;
+}
+
+[data-theme="light"] .agent-theme-tesla .capability-card {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .agent-theme-tesla .capability-card:hover {
+  background: rgba(232, 33, 39, 0.03);
+  border-color: rgba(232, 33, 39, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .agent-theme-tesla .capability-card h3 {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .agent-theme-tesla .capability-card p {
+  color: #6b6b6b;
+}
+
+[data-theme="light"] .agent-theme-tesla .demo-chat {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .agent-theme-tesla .demo-chat-header {
+  background: #f5f5f5;
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .agent-theme-tesla .demo-msg.agent .demo-msg-bubble {
+  background: #f5f5f5;
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .agent-theme-tesla .demo-chat-input input {
+  background: #f5f5f5;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .agent-theme-tesla .demo-chat-input input::placeholder {
+  color: #999;
+}
+
+[data-theme="light"] .agent-theme-tesla .bubble-cta {
+  background: #f5f5f5;
+  border-color: rgba(232, 33, 39, 0.15);
+}
+
+[data-theme="light"] .agent-theme-tesla .bubble-cta h2 {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .agent-theme-tesla .bubble-cta p {
+  color: #6b6b6b;
+}
+
 .agent-theme-tesla .agent-page-bg .orb-main {
   background: #e82127;
   opacity: 0.06;
@@ -734,6 +830,48 @@
 
 .agent-theme-tesla .bubble-pointer-line {
   background: linear-gradient(to bottom, #e82127, transparent);
+}
+
+/* Light theme overrides for base agent page (non-themed agents) */
+[data-theme="light"] .agent-page:not([class*="agent-theme-"]) .agent-page-bg .orb-main,
+[data-theme="light"] .agent-page:not([class*="agent-theme-"]) .agent-page-bg .orb-secondary {
+  opacity: 0.05;
+}
+
+[data-theme="light"] .agent-page:not([class*="agent-theme-"]) .capability-card {
+  background: var(--bg-card);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .agent-page:not([class*="agent-theme-"]) .capability-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .agent-page:not([class*="agent-theme-"]) .agent-feature-pill {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="light"] .agent-page:not([class*="agent-theme-"]) .demo-chat {
+  background: var(--bg-card);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .agent-page:not([class*="agent-theme-"]) .demo-chat-header {
+  background: var(--bg-secondary);
+}
+
+[data-theme="light"] .agent-page:not([class*="agent-theme-"]) .demo-msg.agent .demo-msg-bubble {
+  background: var(--bg-secondary);
+}
+
+[data-theme="light"] .agent-page:not([class*="agent-theme-"]) .demo-chat-input input {
+  background: var(--bg-secondary);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="light"] .agent-page:not([class*="agent-theme-"]) .bubble-cta {
+  background: var(--bg-card);
 }
 
 .agent-page-bg {

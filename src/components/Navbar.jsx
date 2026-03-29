@@ -1,17 +1,20 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Sun, Moon } from 'lucide-react'
+import { useTheme } from '../context/ThemeContext'
 import './Navbar.css'
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
+  const { theme, toggleTheme } = useTheme()
 
   const links = [
     { to: '/', label: 'Home' },
     { to: '/technology', label: 'Technology' },
     { to: '/agents', label: 'Agents' },
     { to: '/integrations', label: 'Integrations' },
+    { to: '/changelog', label: 'Changelog' },
   ]
 
   return (
@@ -36,22 +39,28 @@ function Navbar() {
           <span className="brand-text">HiverAI</span>
         </Link>
 
-        <div className={`navbar-links ${mobileOpen ? 'open' : ''}`}>
-          {links.map(link => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={`nav-link ${location.pathname === link.to ? 'active' : ''}`}
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
+        <div className="navbar-right">
+          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
 
-        <button className="mobile-toggle" onClick={() => setMobileOpen(!mobileOpen)}>
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          <div className={`navbar-links ${mobileOpen ? 'open' : ''}`}>
+            {links.map(link => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={`nav-link ${location.pathname === link.to ? 'active' : ''}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          <button className="mobile-toggle" onClick={() => setMobileOpen(!mobileOpen)}>
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
     </nav>
   )

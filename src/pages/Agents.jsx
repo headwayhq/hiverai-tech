@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { MessageSquare, Bot, Star, ArrowRight, Target } from 'lucide-react'
+import { MessageSquare, Bot, Star, ArrowRight, Target, Rocket, Wand2 } from 'lucide-react'
 import './Agents.css'
 
 const agents = [
@@ -121,6 +121,25 @@ function Agents() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Build your own CTA */}
+      <section className="agents-build-cta">
+        <div className="container">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <div className="build-cta-card">
+              <div className="build-cta-glow" />
+              <div className="build-cta-icon">
+                <Wand2 size={40} />
+              </div>
+              <h2>Build Your Own Agent</h2>
+              <p>Create a custom AI agent tailored to your brand, trained on your data, and deployed in minutes. No code required.</p>
+              <Link to="/get-started" className="btn-primary build-cta-btn">
+                Get Started <ArrowRight size={16} />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
