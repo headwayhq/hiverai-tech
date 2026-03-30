@@ -12,37 +12,6 @@ const fadeUp = {
 
 const releases = [
   {
-    version: '0.4.0',
-    date: '2026-03-20',
-    title: 'Dark & Light Theme Support',
-    highlights: [
-      { type: 'feature', text: 'Added system-wide dark and light theme toggle with localStorage persistence' },
-      { type: 'feature', text: 'All pages and agent themes now fully support both color modes' },
-      { type: 'improvement', text: 'Updated navbar with theme toggle button' },
-    ],
-  },
-  {
-    version: '0.3.0',
-    date: '2026-03-15',
-    title: 'Stripe Agent & Tesla Agent Launch',
-    highlights: [
-      { type: 'feature', text: 'Added Stripe agent for payment lookups, billing inquiries, and refund processing' },
-      { type: 'feature', text: 'Added Tesla agent for vehicle support, service scheduling, and troubleshooting' },
-      { type: 'improvement', text: 'Improved agent character illustrations with unique SVG designs per brand' },
-    ],
-  },
-  {
-    version: '0.2.0',
-    date: '2026-02-28',
-    title: 'Apple Agent & Intercom Comparison',
-    highlights: [
-      { type: 'feature', text: 'Launched Apple ecosystem support agent with branded light theme' },
-      { type: 'feature', text: 'Added Intercom Fin comparison page with side-by-side benchmarks' },
-      { type: 'improvement', text: 'Redesigned agent directory with per-brand color theming' },
-      { type: 'fix', text: 'Fixed mobile navigation overlay not closing on link click' },
-    ],
-  },
-  {
     version: '0.1.0',
     date: '2026-02-10',
     title: 'Initial Launch',

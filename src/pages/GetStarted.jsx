@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useRef, useCallback } from 'react'
 import { motion } from 'framer-motion'
-import { Rocket, ExternalLink, Plus, Code, MessageCircle, CheckCircle2, Copy, Check } from 'lucide-react'
+import { Rocket, ExternalLink, Plus, Code, MessageCircle, CheckCircle2, Copy, Check, Play } from 'lucide-react'
 import './GetStarted.css'
 
 const fadeUp = {
@@ -44,15 +44,43 @@ function GetStarted() {
   const [snippet, setSnippet] = useState('')
   const [isActive, setIsActive] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [injected, setInjected] = useState(false)
+  const injectedScriptsRef = useRef([])
 
-  const handlePaste = (e) => {
+  const handleChange = (e) => {
     setSnippet(e.target.value)
-    if (e.target.value.trim().length > 10) {
-      setIsActive(true)
-    } else {
-      setIsActive(false)
-    }
+    setIsActive(e.target.value.trim().length > 10)
+    setInjected(false)
   }
+
+  const executeSnippet = useCallback(() => {
+    if (!snippet.trim()) return
+
+    // Clean up previously injected scripts
+    injectedScriptsRef.current.forEach(el => el.remove())
+    injectedScriptsRef.current = []
+
+    // Parse the snippet HTML to extract script tags
+    const parser = new DOMParser()
+    const doc = parser.parseFromString(snippet, 'text/html')
+    const scripts = doc.querySelectorAll('script')
+
+    scripts.forEach(original => {
+      const script = document.createElement('script')
+      // Copy all attributes
+      for (const attr of original.attributes) {
+        script.setAttribute(attr.name, attr.value)
+      }
+      // Copy inline content
+      if (original.textContent) {
+        script.textContent = original.textContent
+      }
+      document.body.appendChild(script)
+      injectedScriptsRef.current.push(script)
+    })
+
+    setInjected(true)
+  }, [snippet])
 
   const handleCopyExample = () => {
     const example = `<script src="https://widget.hiverhq.com/chat.js" data-channel-id="YOUR_CHANNEL_ID"></script>`
@@ -98,9 +126,9 @@ function GetStarted() {
                 <div className="snippet-body">
                   <textarea
                     className="snippet-input"
-                    placeholder={'<!-- Paste your Hiver chat snippet here -->\n\n<script src="https://widget.hiverhq.com/chat.js"\n  data-channel-id="YOUR_CHANNEL_ID">\n</script>'}
+                    placeholder={'<!-- Paste your Hiver chat snippet here -->\n\n<script src="https://chat-widget.hiverhq.com/...">\n</script>'}
                     value={snippet}
-                    onChange={handlePaste}
+                    onChange={handleChange}
                     spellCheck={false}
                   />
                 </div>
@@ -109,34 +137,28 @@ function GetStarted() {
                     {copied ? <Check size={14} /> : <Copy size={14} />}
                     {copied ? 'Copied!' : 'Copy example snippet'}
                   </button>
-                  <div className={`snippet-status ${isActive ? 'active' : ''}`}>
+                  <div className={`snippet-status ${injected ? 'injected' : isActive ? 'active' : ''}`}>
                     <CheckCircle2 size={14} />
-                    {isActive ? 'Snippet detected' : 'Waiting for snippet'}
+                    {injected ? 'Widget loaded!' : isActive ? 'Snippet detected' : 'Waiting for snippet'}
                   </div>
                 </div>
               </div>
 
-              {/* Preview bubble */}
+              {/* Execute button */}
               {isActive && (
-                <motion.div
-                  className="preview-bubble"
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                <motion.button
+                  className={`snippet-execute-btn ${injected ? 'executed' : ''}`}
+                  onClick={executeSnippet}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <div className="preview-bubble-header">
-                    <div className="preview-bubble-dot" />
-                    <span>HiverAI Agent</span>
-                  </div>
-                  <div className="preview-bubble-body">
-                    <div className="preview-msg agent-msg">
-                      Hi there! I'm your AI assistant. How can I help you today?
-                    </div>
-                  </div>
-                  <div className="preview-bubble-input">
-                    <input type="text" placeholder="Type a message..." readOnly />
-                  </div>
-                </motion.div>
+                  {injected ? (
+                    <><CheckCircle2 size={18} /> Widget is live — check the bottom-right corner</>
+                  ) : (
+                    <><Play size={18} /> Run Snippet</>
+                  )}
+                </motion.button>
               )}
             </motion.div>
 
