@@ -1303,3 +1303,201 @@
     padding: 60px 24px;
   }
 }
+
+/* ===== DIAMONDERE THEME — Luxury serif, maroon accent, white & elegant ===== */
+.agent-theme-diamondere {
+  background: #ffffff;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.agent-theme-diamondere .agent-page-bg .orb-main,
+.agent-theme-diamondere .agent-page-bg .orb-secondary {
+  display: none;
+}
+
+.agent-theme-diamondere .agent-page-hero-text h1 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+  font-style: italic;
+}
+
+.agent-theme-diamondere .agent-page-subtitle {
+  color: #555;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.agent-theme-diamondere .section-header h2 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+.agent-theme-diamondere .section-header p {
+  color: #666;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.agent-theme-diamondere .agent-page-badge {
+  background: rgba(122, 31, 46, 0.06);
+  border-color: rgba(122, 31, 46, 0.15);
+  color: #7a1f2e;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+}
+
+.agent-theme-diamondere .agent-feature-pill {
+  background: #fff;
+  border: 1px solid #e0d6d0;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+.agent-theme-diamondere .feature-check {
+  color: #7a1f2e;
+}
+
+.agent-theme-diamondere .capability-card {
+  background: #faf8f6;
+  border: 1px solid #e8e2dc;
+  box-shadow: none;
+}
+
+.agent-theme-diamondere .capability-card:hover {
+  background: #fff;
+  border-color: #d4ccc4;
+  box-shadow: 0 8px 32px rgba(122, 31, 46, 0.06);
+  transform: translateY(-3px);
+}
+
+.agent-theme-diamondere .capability-icon {
+  color: #7a1f2e;
+}
+
+.agent-theme-diamondere .capability-card h3 {
+  color: #1a1a1a;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 400;
+}
+
+.agent-theme-diamondere .capability-card p {
+  color: #666;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.agent-theme-diamondere .demo-chat {
+  background: #fff;
+  border: 1px solid #e8e2dc;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.agent-theme-diamondere .demo-chat-header {
+  background: #faf8f6;
+  border-color: #e8e2dc;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.agent-theme-diamondere .demo-chat-status {
+  color: #34C759;
+}
+
+.agent-theme-diamondere .demo-msg.agent .demo-msg-bubble {
+  background: #faf8f6;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.agent-theme-diamondere .demo-msg.user .demo-msg-bubble {
+  background: #7a1f2e;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.agent-theme-diamondere .demo-chat-input {
+  border-color: #e8e2dc;
+}
+
+.agent-theme-diamondere .demo-chat-input input {
+  background: #faf8f6;
+  border-color: #e8e2dc;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.agent-theme-diamondere .demo-chat-input input::placeholder {
+  color: #aaa;
+}
+
+.agent-theme-diamondere .demo-chat-send {
+  background: #7a1f2e;
+}
+
+.agent-theme-diamondere .bubble-cta {
+  background: #faf8f6;
+  border: 1px solid #e8e2dc;
+}
+
+.agent-theme-diamondere .bubble-cta-glow {
+  display: none;
+}
+
+.agent-theme-diamondere .bubble-cta h2 {
+  color: #1a1a1a;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 400;
+}
+
+.agent-theme-diamondere .bubble-cta p {
+  color: #666;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.agent-theme-diamondere .bubble-cta-icon {
+  color: #7a1f2e;
+}
+
+.agent-theme-diamondere .bubble-pointer-dot {
+  background: #7a1f2e;
+  box-shadow: 0 0 30px rgba(122, 31, 46, 0.25);
+}
+
+.agent-theme-diamondere .bubble-pointer-line {
+  background: linear-gradient(to bottom, #7a1f2e, transparent);
+}
+
+.agent-theme-diamondere .character-status {
+  background: #fff;
+  border: 1px solid #e8e2dc;
+  color: #666;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.agent-theme-diamondere .demo-cta-left h2 {
+  color: #1a1a1a;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.agent-theme-diamondere .demo-cta-subtitle {
+  color: #666;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Character card bg for light page */
+.agent-theme-diamondere .character-card {
+  background: #faf8f6;
+  border: 1px solid #e8e2dc;
+}

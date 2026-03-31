@@ -52,7 +52,7 @@ function Home() {
 
             <motion.div className="hero-stats" variants={fadeUp} custom={4}>
               <div className="stat">
-                <span className="stat-value">5</span>
+                <span className="stat-value">6</span>
                 <span className="stat-label">Live Agents</span>
               </div>
               <div className="stat-divider" />
@@ -122,6 +122,10 @@ function Home() {
               <Link to="/agents/tesla" className="connection-node node-4">
                 <img src="/logos/tesla.jpg" alt="Tesla" className="node-logo" />
                 <span>Tesla</span>
+              </Link>
+              <Link to="/agents/diamondere" className="connection-node node-5">
+                <img src="/logos/diamondere.jpeg" alt="Diamondere" className="node-logo" />
+                <span>Diamondere</span>
               </Link>
               <Link to="/agents/intercom" className="connection-node node-competitor">
                 <img src="/logos/intercom.jpeg" alt="Intercom" className="node-logo" />

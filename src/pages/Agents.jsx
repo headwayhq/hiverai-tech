@@ -44,6 +44,16 @@ const agents = [
     primary: false,
     path: '/agents/tesla',
   },
+  {
+    id: 'diamondere',
+    name: 'Diamondere Agent',
+    tagline: 'Premium diamond e-commerce support',
+    description: 'AI-powered support for Diamondere — diamond guidance, ring customization, order tracking, and expert jewelry assistance.',
+    color: '#7a1f2e',
+    logo: '/logos/diamondere.jpeg',
+    primary: false,
+    path: '/agents/diamondere',
+  },
 ]
 
 const competitor = {
@@ -77,7 +87,7 @@ function Agents() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="agents-hero-content">
             <div className="agents-badge">
               <Bot size={14} />
-              <span>4 Live Agents</span>
+              <span>5 Live Agents</span>
             </div>
             <h1>Meet Your <span className="agents-gradient-text">AI Agents</span></h1>
             <p>Each agent is a deployable chat widget — embed it on any website with a single HTML snippet. Same intelligent engine, customized for each use case.</p>
