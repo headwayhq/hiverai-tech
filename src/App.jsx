@@ -12,6 +12,7 @@ import AgentIntercom from './pages/AgentIntercom'
 import AgentStripe from './pages/AgentStripe'
 import AgentTesla from './pages/AgentTesla'
 import AgentDiamondere from './pages/AgentDiamondere'
+import AgentBackd from './pages/AgentBackd'
 import Changelog from './pages/Changelog'
 import ComingSoon from './pages/ComingSoon'
 import GetStarted from './pages/GetStarted'
@@ -19,12 +20,12 @@ import ComingSoonBanner from './components/ComingSoonBanner'
 
 function App() {
   const location = useLocation()
-  const isDiamondere = location.pathname === '/agents/diamondere'
+  const isCustomPage = location.pathname === '/agents/diamondere' || location.pathname === '/agents/backd'
 
   return (
     <>
       <ScrollToTop />
-      {!isDiamondere && <Navbar />}
+      {!isCustomPage && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/technology" element={<Technology />} />
@@ -35,13 +36,14 @@ function App() {
         <Route path="/agents/stripe" element={<AgentStripe />} />
         <Route path="/agents/tesla" element={<AgentTesla />} />
         <Route path="/agents/diamondere" element={<AgentDiamondere />} />
+        <Route path="/agents/backd" element={<AgentBackd />} />
         <Route path="/integrations" element={<Integrations />} />
         <Route path="/changelog" element={<Changelog />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/get-started" element={<GetStarted />} />
       </Routes>
-      {!isDiamondere && <ComingSoonBanner />}
-      {!isDiamondere && <Footer />}
+      {!isCustomPage && <ComingSoonBanner />}
+      {!isCustomPage && <Footer />}
     </>
   )
 }

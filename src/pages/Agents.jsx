@@ -54,6 +54,16 @@ const agents = [
     primary: false,
     path: '/agents/diamondere',
   },
+  {
+    id: 'backd',
+    name: 'Backd Agent',
+    tagline: 'Small business finance support',
+    description: 'AI-powered support for Backd — business loans, lines of credit, B2B payments, and financial product guidance.',
+    color: '#4040d3',
+    logo: '/logos/backd.png',
+    primary: false,
+    path: '/agents/backd',
+  },
 ]
 
 const competitor = {
