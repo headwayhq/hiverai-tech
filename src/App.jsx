@@ -13,6 +13,7 @@ import AgentStripe from './pages/AgentStripe'
 import AgentTesla from './pages/AgentTesla'
 import AgentDiamondere from './pages/AgentDiamondere'
 import AgentBackd from './pages/AgentBackd'
+import AgentAdvancedAutomation from './pages/AgentAdvancedAutomation'
 import Changelog from './pages/Changelog'
 import ComingSoon from './pages/ComingSoon'
 import GetStarted from './pages/GetStarted'
@@ -20,7 +21,7 @@ import ComingSoonBanner from './components/ComingSoonBanner'
 
 function App() {
   const location = useLocation()
-  const isCustomPage = location.pathname === '/agents/diamondere' || location.pathname === '/agents/backd'
+  const isCustomPage = location.pathname === '/agents/diamondere' || location.pathname === '/agents/backd' || location.pathname === '/agents/advanced-automation'
 
   return (
     <>
@@ -37,6 +38,7 @@ function App() {
         <Route path="/agents/tesla" element={<AgentTesla />} />
         <Route path="/agents/diamondere" element={<AgentDiamondere />} />
         <Route path="/agents/backd" element={<AgentBackd />} />
+        <Route path="/agents/advanced-automation" element={<AgentAdvancedAutomation />} />
         <Route path="/integrations" element={<Integrations />} />
         <Route path="/changelog" element={<Changelog />} />
         <Route path="/coming-soon" element={<ComingSoon />} />

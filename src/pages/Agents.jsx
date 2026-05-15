@@ -64,6 +64,16 @@ const agents = [
     primary: false,
     path: '/agents/backd',
   },
+  {
+    id: 'advanced-automation',
+    name: 'Advanced Automation Agent',
+    tagline: 'Barcoding hardware & supplies support',
+    description: 'AI-powered support for Advanced Automation — barcode printers, scanners, mobile computers, supplies, and repair services.',
+    color: '#0d6e3d',
+    logo: '/logos/advanced-automation.png',
+    primary: false,
+    path: '/agents/advanced-automation',
+  },
 ]
 
 const competitor = {
@@ -97,7 +107,7 @@ function Agents() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="agents-hero-content">
             <div className="agents-badge">
               <Bot size={14} />
-              <span>5 Live Agents</span>
+              <span>7 Live Agents</span>
             </div>
             <h1>Meet Your <span className="agents-gradient-text">AI Agents</span></h1>
             <p>Each agent is a deployable chat widget — embed it on any website with a single HTML snippet. Same intelligent engine, customized for each use case.</p>
