@@ -59,7 +59,7 @@ const agent = {
 }
 
 function AgentHiver() {
-  useChatWidget('ZWwWBjwKDHjWuHk8J38HiyKU')
+  useChatWidget('GaqP1p9FdnMJ8rBv6A7ci4hE')
   return <AgentPage agent={agent} />
 }
 
